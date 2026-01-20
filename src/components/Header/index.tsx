@@ -36,8 +36,13 @@ const Header = ({ t }: { t: TFunction }) => {
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
           <Span>{t("Services")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Competence")}</Span>
+        <CustomNavLinkSmall
+          as="a"
+          href="https://wa.me/919999999999?text=Hi%20Dhobiapp%20Team!%20I%20would%20like%20to%20chat."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Span>Let's Chat</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           as="a"

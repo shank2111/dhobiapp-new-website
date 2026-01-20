@@ -78,6 +78,7 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Para>30 Kasturba Gandhi Marg</Para>
               <Para>Laxmi Talkies Campus, Old Katra</Para>
               <Para>Prayagraj, Uttar Pradesh, India, 211002</Para>
+              <Para>Official Phone : 9670548484</Para>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Company")}</Title>
@@ -120,7 +121,7 @@ const Footer = ({ t }: { t: TFunction }) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://twitter.com/dhobiapp"
+                href="https://x.com/dhobi_app"
                 src="x.svg"
               />
               <SocialLink
