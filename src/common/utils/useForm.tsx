@@ -3,13 +3,13 @@ import { notification } from "antd";
 
 interface IValues {
   name: string;
-  email: string;
+  mobile: string;
   message: string;
 }
 
 const initialValues: IValues = {
   name: "",
-  email: "",
+  mobile: "",
   message: "",
 };
 
@@ -21,18 +21,17 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     values: { ...initialValues },
     errors: { ...initialValues },
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const values = formState.values;
     const errors = validate(values);
     setFormState((prevState) => ({ ...prevState, errors }));
 
-    const url = ""; // Fill in your API URL here
-
     try {
       if (Object.values(errors).every((error) => error === "")) {
-        const response = await fetch(url, {
+        const response = await fetch("https://dhobiapp.in/publicquery", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -47,11 +46,11 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
               "There was an error sending your message, please try again later.",
           });
         } else {
-          event.target.reset();
           setFormState(() => ({
             values: { ...initialValues },
             errors: { ...initialValues },
           }));
+          setIsSubmitted(true);
 
           notification["success"]({
             message: "Success",
@@ -90,5 +89,6 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     handleSubmit,
     values: formState.values,
     errors: formState.errors,
+    isSubmitted,
   };
 };

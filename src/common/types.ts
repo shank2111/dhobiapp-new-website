@@ -7,6 +7,8 @@ export interface ContainerProps {
 export interface ButtonProps {
   color?: string;
   name?: string;
+  type?: "submit" | "button" | "reset";
+  disabled?: boolean;
   children: React.ReactNode;
   onClick?: () => void;
 }
@@ -32,5 +34,5 @@ export interface InputProps {
 export interface validateProps {
   name: string;
   message: string;
-  email: string;
+  mobile: string;
 }

@@ -11,7 +11,7 @@ import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  const { values, errors, handleChange, handleSubmit, isSubmitted } = useForm(validate);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
@@ -42,12 +42,12 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               <Col span={24}>
                 <Input
                   type="text"
-                  name="email"
-                  placeholder="Your Email"
-                  value={values.email || ""}
+                  name="mobile"
+                  placeholder="Your Mobile Number"
+                  value={values.mobile || ""}
                   onChange={handleChange}
                 />
-                <ValidationType type="email" />
+                <ValidationType type="mobile" />
               </Col>
               <Col span={24}>
                 <TextArea
@@ -59,7 +59,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="message" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
+                <Button name="submit" type="submit" disabled={isSubmitted}>{t("Submit")}</Button>
               </ButtonContainer>
             </FormGroup>
           </Slide>

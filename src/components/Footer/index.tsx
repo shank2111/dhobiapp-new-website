@@ -56,14 +56,14 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Para>
                 {t(`Do you have any question? Feel free to reach out.`)}
               </Para>
-              <a href="mailto:l.qqbadze@gmail.com">
+              <a href="https://wa.me/919670548484">
                 <Chat>{t(`Let's Chat`)}</Chat>
               </a>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Policy")}</Title>
-              <Large to="/">{t("Application Security")}</Large>
-              <Large to="/">{t("Software Principles")}</Large>
+              <Large to="/privacy-policy">{t("Privacy Policy")}</Large>
+              <Large to="/terms-and-conditions">{t("Data Protection")}</Large>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Empty />
@@ -75,15 +75,14 @@ const Footer = ({ t }: { t: TFunction }) => {
             <Col lg={10} md={10} sm={12} xs={12}>
               <Empty />
               <Language>{t("Address")}</Language>
-              <Para>Rancho Santa Margarita</Para>
-              <Para>2131 Elk Street</Para>
-              <Para>California</Para>
+              <Para>30 Kasturba Gandhi Marg</Para>
+              <Para>Laxmi Talkies Campus, Old Katra</Para>
+              <Para>Prayagraj, Uttar Pradesh, India, 211002</Para>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Company")}</Title>
-              <Large to="/">{t("About")}</Large>
-              <Large to="/">{t("Blog")}</Large>
-              <Large to="/">{t("Press")}</Large>
+              <Large to="/">{t("Reviews")}</Large>
+              <Large to="/terms-and-conditions">{t("Terms & Conditions")}</Large>
               <Large to="/">{t("Careers & Culture")}</Large>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
@@ -91,15 +90,7 @@ const Footer = ({ t }: { t: TFunction }) => {
               <LanguageSwitchContainer>
                 <LanguageSwitch onClick={() => handleChange("en")}>
                   <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("es")}>
-                  <SvgIcon
-                    src="spain.svg"
+                    src="india.svg"
                     aria-label="homepage"
                     width="30px"
                     height="30px"
@@ -129,33 +120,17 @@ const Footer = ({ t }: { t: TFunction }) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
+                href="https://twitter.com/dhobiapp"
+                src="x.svg"
               />
               <SocialLink
-                href="https://twitter.com/Adrinlolx"
-                src="twitter.svg"
+                href="https://www.facebook.com/dhobiapp"
+                src="facebook.svg"
               />
               <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
-                src="linkedin.svg"
+                href="https://www.instagram.com/dhobiapp"
+                src="instagram.svg"
               />
-              <SocialLink
-                href="https://medium.com/@lashakakabadze/"
-                src="medium.svg"
-              />
-              <a
-                href="https://ko-fi.com/Y8Y7H8BNJ"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  height="36"
-                  style={{ border: 0, height: 36 }}
-                  src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
-                  alt="Buy Me a Coffee at ko-fi.com"
-                />
-              </a>
             </FooterContainer>
           </Row>
         </Container>

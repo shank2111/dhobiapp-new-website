@@ -1,0 +1,15 @@
+runtime: nodejs20 # Or the appropriate Node.js version for your app
+instance_class: F1 # Choose an instance class that suits your needs (F1 is free tier eligible)
+
+handlers:
+  # Serve all static files with a file extension from the 'dist' directory
+  - url: /(.*\..+)$
+    static_files: build/\1
+    upload: build/(.*\..+)$
+
+  # Catch-all handler to serve index.html for all other URLs (for client-side routing)
+  - url: /.*
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+    redirect_http_response_code: 301

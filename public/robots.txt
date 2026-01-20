@@ -1,3 +1,10 @@
 # https://www.robotstxt.org/robotstxt.html
+# Allow all crawlers to access all pages
 User-agent: *
-Disallow:
+Allow: /
+
+# Specify sitemap
+Sitemap: https://dhobiapp.com/sitemap.xml
+
+# Crawl delay for bots (optional, in seconds)
+Crawl-delay: 1

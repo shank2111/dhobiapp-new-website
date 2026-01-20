@@ -1,15 +1,15 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Fast and responsible services",
+  "text": "Lehengas | Sarees | Suits | Dresses | Curtains | Blankets | Quilts | Sofa | Carpets | Leather | Suede | Winter Wear | Comforters | Soft Toys and more..",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "Everytime it works?",
+      "content": "Yes everytime, when garment gets older it tend to loose shine and color.",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "Sofa Cleaning at home?",
+      "content": "Yes correct, our team is equipped to handle all types of furniture cleaning at your doorstep.",
       "icon": "notes.svg"
     }
   ]
